@@ -17,24 +17,6 @@ object RSSClient {
   val RSS_VERSION = "2.0"
   val DEFAULT_CONFIG_FILE = "feeds.txt"
 
-  /*
-  def blah() = {
-    val response: Future[HttpResponse] = Http.fetchUrl("http://www.xkcd.com/rss.xml")
-      response onSuccess { resp: HttpResponse =>
-        val correctVersion = elem 
-          .attribute("version") 
-          .filter { _(0).text == RSS_VERSION } 
-          .isDefined
-
-          if (correctVersion) {
-            parseXML(elem)
-          } else {
-
-          }
-      }
-  }
-  */
-
   def errorAndQuit(errorMessage: String) = {
     System.err.println("ERROR: " + errorMessage)
     System.exit(1)
